@@ -15,17 +15,19 @@ function multiply(a,b) {
     return a * b;
 }
 //orator function that connects and calls the obove functions
-function operator(operator,a,b) {
+function operate(operator,a,b) {
     let num1=Number(a);
     let num2=Number(b);
     if (operator==='+') {
        return add(num1,num2);
-    } else if (operator==='-') {
-        return subtract(num1,num2);
-    } else if(operator==='*') {
-        return multiply(num1,num2);
     }
-    else if (operator==='/') {
+    if (operator==='-') {
+        return subtract(num1,num2);
+    }
+    if (operator==='*') {
+      return multiply(num1,num2) ; 
+    }
+    if (operator==='/') {
         return divide(num1,num2);
     }
 }
